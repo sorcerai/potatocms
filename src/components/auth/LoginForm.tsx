@@ -34,8 +34,8 @@ export function LoginForm() {
         })
         if (error) throw error
       }
-    } catch (error: any) {
-      setMessage(error.message)
+    } catch (error: unknown) {
+      setMessage(error instanceof Error ? error.message : 'An error occurred')
     } finally {
       setLoading(false)
     }
@@ -47,8 +47,8 @@ export function LoginForm() {
         provider: 'google',
       })
       if (error) throw error
-    } catch (error: any) {
-      setMessage(error.message)
+    } catch (error: unknown) {
+      setMessage(error instanceof Error ? error.message : 'An error occurred')
     }
   }
 

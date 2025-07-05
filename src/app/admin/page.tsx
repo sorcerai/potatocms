@@ -141,7 +141,7 @@ export default function AdminDashboard() {
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <div>
                   <p className="text-sm font-medium">Content published</p>
-                  <p className="text-xs text-muted-foreground">"Getting Started with PotatoCMS" was published</p>
+                  <p className="text-xs text-muted-foreground">&quot;Getting Started with PotatoCMS&quot; was published</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
