@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { supabase } from '@/lib/supabase'
+import { useState, useEffect } from 'react'
+import { getSupabaseClient, isSupabaseConfigured, getSupabaseConfigError } from '@/lib/supabase'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -13,13 +13,34 @@ export function LoginForm() {
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
   const [isSignUp, setIsSignUp] = useState(false)
+  const [supabaseConfigured, setSupabaseConfigured] = useState(true)
+
+  useEffect(() => {
+    // Check Supabase configuration on component mount
+    const configured = isSupabaseConfigured()
+    setSupabaseConfigured(configured)
+    
+    if (!configured) {
+      const error = getSupabaseConfigError()
+      setMessage(error || 'Supabase is not properly configured')
+    }
+  }, [])
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Check if Supabase is properly configured before attempting authentication
+    if (!supabaseConfigured) {
+      setMessage('Authentication is not available. Please check your Supabase configuration.')
+      return
+    }
+
     setLoading(true)
     setMessage('')
 
     try {
+      const supabase = getSupabaseClient()
+      
       if (isSignUp) {
         const { error } = await supabase.auth.signUp({
           email,
@@ -42,7 +63,14 @@ export function LoginForm() {
   }
 
   const handleGoogleAuth = async () => {
+    // Check if Supabase is properly configured before attempting OAuth
+    if (!supabaseConfigured) {
+      setMessage('OAuth authentication is not available. Please check your Supabase configuration.')
+      return
+    }
+
     try {
+      const supabase = getSupabaseClient()
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
       })
@@ -76,7 +104,7 @@ export function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <Button type="submit" className="w-full" disabled={loading}>
+          <Button type="submit" className="w-full" disabled={loading || !supabaseConfigured}>
             {loading ? 'Loading...' : isSignUp ? 'Sign Up' : 'Sign In'}
           </Button>
         </form>
@@ -90,7 +118,7 @@ export function LoginForm() {
           </div>
         </div>
 
-        <Button variant="outline" onClick={handleGoogleAuth} className="w-full">
+        <Button variant="outline" onClick={handleGoogleAuth} className="w-full" disabled={!supabaseConfigured}>
           Continue with Google
         </Button>
 

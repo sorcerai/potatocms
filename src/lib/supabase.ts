@@ -1,9 +1,68 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+// Environment variable validation with build-time safety
+const getEnvironmentConfig = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  // During build time or when environment variables are missing,
+  // provide placeholder values that allow module loading without errors
+  if (!supabaseUrl || !supabaseAnonKey) {
+    // Return placeholder configuration for build-time compatibility
+    return {
+      url: 'https://placeholder.supabase.co',
+      anonKey: 'placeholder-anon-key',
+      isConfigured: false,
+      error: 'Supabase environment variables are not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY.'
+    }
+  }
+
+  return {
+    url: supabaseUrl,
+    anonKey: supabaseAnonKey,
+    isConfigured: true,
+    error: null
+  }
+}
+
+// Lazy client initialization with validation
+let _supabaseClient: SupabaseClient | null = null
+let _configError: string | null = null
+
+export const getSupabaseClient = (): SupabaseClient => {
+  // Return existing client if available
+  if (_supabaseClient) {
+    return _supabaseClient
+  }
+
+  const config = getEnvironmentConfig()
+
+  // Store configuration error for user-friendly messaging
+  if (!config.isConfigured) {
+    _configError = config.error
+    console.warn('⚠️ Supabase client initialized with placeholder values for build compatibility')
+  }
+
+  // Create client with either real or placeholder values
+  _supabaseClient = createClient(config.url, config.anonKey)
+  
+  return _supabaseClient
+}
+
+// Check if Supabase is properly configured for runtime operations
+export const isSupabaseConfigured = (): boolean => {
+  const config = getEnvironmentConfig()
+  return config.isConfigured
+}
+
+// Get configuration error message for user display
+export const getSupabaseConfigError = (): string | null => {
+  const config = getEnvironmentConfig()
+  return config.error
+}
+
+// Backward compatibility export - now uses lazy initialization
+export const supabase = getSupabaseClient()
 
 // Types for our database
 export interface User {
