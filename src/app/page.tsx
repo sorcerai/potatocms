@@ -18,8 +18,8 @@ export default function Home() {
           <Link href="/login">
             <Button variant="outline" className="border-gray-300 text-gray-600 hover:bg-gray-50">Sign In</Button>
           </Link>
-          <Link href="/admin">
-            <Button className="bg-gray-900 hover:bg-gray-800 text-white">Admin</Button>
+          <Link href="/admin/demo">
+            <Button className="bg-gray-900 hover:bg-gray-800 text-white">Admin Demo</Button>
           </Link>
         </nav>
       </header>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="flex justify-center space-x-6 text-sm text-gray-500">
             <Link href="/demo" className="hover:text-gray-900 transition-colors">Demo</Link>
             <Link href="/login" className="hover:text-gray-900 transition-colors">Login</Link>
-            <Link href="/admin" className="hover:text-gray-900 transition-colors">Admin</Link>
+            <Link href="/admin/demo" className="hover:text-gray-900 transition-colors">Admin Demo</Link>
           </div>
           <div className="text-xs text-gray-400 pt-4">
             © 2025 PotatoCMS. All rights reserved.

@@ -19,8 +19,8 @@ export default function DemoPage() {
           <Link href="/login">
             <Button variant="outline" className="border-gray-300 text-gray-600 hover:bg-gray-50">Sign In</Button>
           </Link>
-          <Link href="/admin">
-            <Button className="bg-gray-900 hover:bg-gray-800 text-white">Admin</Button>
+          <Link href="/admin/demo">
+            <Button className="bg-gray-900 hover:bg-gray-800 text-white">Admin Demo</Button>
           </Link>
         </nav>
       </header>
@@ -180,9 +180,9 @@ export default function DemoPage() {
                   Try Authentication
                 </Button>
               </Link>
-              <Link href="/admin">
+              <Link href="/admin/demo">
                 <Button variant="outline" size="lg">
-                  View Admin Panel
+                  View Admin Demo
                 </Button>
               </Link>
             </div>
