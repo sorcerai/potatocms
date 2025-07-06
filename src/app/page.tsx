@@ -9,7 +9,7 @@ export default function Home() {
       <header className="container mx-auto px-4 py-6 flex justify-between items-center bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm sticky top-0 z-50">
         <div className="flex items-center space-x-2">
           <span className="text-2xl">🥔</span>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">PotatoCMS</h1>
+          <h1 className="text-2xl font-bold text-gray-900">PotatoCMS</h1>
         </div>
         <nav className="flex items-center space-x-4">
           <Link href="/demo">
@@ -19,7 +19,7 @@ export default function Home() {
             <Button variant="outline" className="border-gray-300 text-gray-600 hover:bg-gray-50">Sign In</Button>
           </Link>
           <Link href="/admin">
-            <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">Admin</Button>
+            <Button className="bg-gray-900 hover:bg-gray-800 text-white">Admin</Button>
           </Link>
         </nav>
       </header>
@@ -28,11 +28,11 @@ export default function Home() {
       <main className="container mx-auto px-4 py-20">
         <div className="text-center space-y-8">
           <div className="space-y-6">
-            <div className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-700 border border-orange-200 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 border border-gray-200 rounded-full text-sm font-medium mb-4">
               🚀 New: Advanced subscription management features
             </div>
             <h1 className="text-6xl font-bold tracking-tight leading-tight text-gray-900">
-              Welcome to <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">PotatoCMS</span> 🥔
+              Welcome to <span className="text-gray-900">PotatoCMS</span> 🥔
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               A modern, subscription-based Content Management System built with Next.js 14, 
@@ -43,7 +43,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <Link href="/login">
-              <Button size="lg" className="text-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg hover:shadow-xl transition-all duration-200 text-white">
+              <Button size="lg" className="text-lg px-8 py-3 bg-gray-900 hover:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-200 text-white">
                 Get Started Free
               </Button>
             </Link>
@@ -60,7 +60,7 @@ export default function Home() {
           <Card className="border-gray-200 bg-white hover:shadow-lg transition-all duration-200 hover:scale-105">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-gray-900">
-                <div className="p-2 bg-orange-100 rounded-lg">
+                <div className="p-2 bg-gray-100 rounded-lg">
                   <span className="text-xl">🔐</span>
                 </div>
                 <span>Authentication</span>
@@ -76,7 +76,7 @@ export default function Home() {
           <Card className="border-gray-200 bg-white hover:shadow-lg transition-all duration-200 hover:scale-105">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-gray-900">
-                <div className="p-2 bg-blue-100 rounded-lg">
+                <div className="p-2 bg-gray-100 rounded-lg">
                   <span className="text-xl">💳</span>
                 </div>
                 <span>Subscriptions</span>
@@ -92,7 +92,7 @@ export default function Home() {
           <Card className="border-gray-200 bg-white hover:shadow-lg transition-all duration-200 hover:scale-105">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-gray-900">
-                <div className="p-2 bg-green-100 rounded-lg">
+                <div className="p-2 bg-gray-100 rounded-lg">
                   <span className="text-xl">📝</span>
                 </div>
                 <span>Content Management</span>
@@ -108,7 +108,7 @@ export default function Home() {
           <Card className="border-gray-200 bg-white hover:shadow-lg transition-all duration-200 hover:scale-105">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-gray-900">
-                <div className="p-2 bg-purple-100 rounded-lg">
+                <div className="p-2 bg-gray-100 rounded-lg">
                   <span className="text-xl">🔒</span>
                 </div>
                 <span>Content Gating</span>
@@ -124,7 +124,7 @@ export default function Home() {
           <Card className="border-gray-200 bg-white hover:shadow-lg transition-all duration-200 hover:scale-105">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-gray-900">
-                <div className="p-2 bg-pink-100 rounded-lg">
+                <div className="p-2 bg-gray-100 rounded-lg">
                   <span className="text-xl">📱</span>
                 </div>
                 <span>Responsive Design</span>
@@ -140,7 +140,7 @@ export default function Home() {
           <Card className="border-gray-200 bg-white hover:shadow-lg transition-all duration-200 hover:scale-105">
             <CardHeader>
               <CardTitle className="flex items-center space-x-3 text-gray-900">
-                <div className="p-2 bg-yellow-100 rounded-lg">
+                <div className="p-2 bg-gray-100 rounded-lg">
                   <span className="text-xl">⚡</span>
                 </div>
                 <span>Performance</span>
@@ -157,7 +157,7 @@ export default function Home() {
         {/* Tech Stack */}
         <div className="mt-24 bg-gray-50 rounded-2xl p-12 border border-gray-200">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Built with Modern Technology</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Built with Modern Technology</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               PotatoCMS leverages the latest and greatest technologies to deliver exceptional performance, 
               developer experience, and user satisfaction.
@@ -197,15 +197,15 @@ export default function Home() {
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center space-x-2">
             <span className="text-2xl">🥔</span>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">PotatoCMS</h3>
+            <h3 className="text-xl font-bold text-gray-900">PotatoCMS</h3>
           </div>
           <p className="text-gray-600">
-            Built with 🥔 by <a href="https://www.linkedin.com/in/ariapramesi/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors font-semibold text-orange-500">Aria P</a>
+            Built with 🥔 by <a href="https://www.linkedin.com/in/ariapramesi/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors font-semibold text-gray-700">Aria P</a>
           </p>
           <div className="flex justify-center space-x-6 text-sm text-gray-500">
-            <Link href="/demo" className="hover:text-orange-500 transition-colors">Demo</Link>
-            <Link href="/login" className="hover:text-orange-500 transition-colors">Login</Link>
-            <Link href="/admin" className="hover:text-orange-500 transition-colors">Admin</Link>
+            <Link href="/demo" className="hover:text-gray-900 transition-colors">Demo</Link>
+            <Link href="/login" className="hover:text-gray-900 transition-colors">Login</Link>
+            <Link href="/admin" className="hover:text-gray-900 transition-colors">Admin</Link>
           </div>
           <div className="text-xs text-gray-400 pt-4">
             © 2025 PotatoCMS. All rights reserved.
