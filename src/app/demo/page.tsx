@@ -2,41 +2,39 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function DemoPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Header */}
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm dark:border-slate-700">
+      <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b bg-slate-900/80 backdrop-blur-sm border-slate-700">
         <div className="flex items-center space-x-2">
           <span className="text-2xl">🥔</span>
           <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">PotatoCMS</h1>
         </div>
         <nav className="flex items-center space-x-4">
           <Link href="/">
-            <Button variant="outline" className="border-orange-200 hover:bg-orange-50 dark:border-orange-800 dark:hover:bg-orange-950">Home</Button>
+            <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-500">Home</Button>
           </Link>
           <Link href="/login">
-            <Button variant="outline" className="border-orange-200 hover:bg-orange-50 dark:border-orange-800 dark:hover:bg-orange-950">Sign In</Button>
+            <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-500">Sign In</Button>
           </Link>
           <Link href="/admin">
-            <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">Admin</Button>
+            <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white">Admin</Button>
           </Link>
-          <ThemeToggle />
         </nav>
       </header>
 
       {/* Demo Hero */}
       <main className="container mx-auto px-4 py-12">
         <div className="text-center space-y-6 mb-16">
-          <Badge variant="secondary" className="text-sm px-4 py-2 bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300">
+          <Badge variant="secondary" className="text-sm px-4 py-2 bg-orange-900/50 text-orange-300 border border-orange-700">
             🚀 Live Demo
           </Badge>
-          <h1 className="text-5xl font-bold tracking-tight">
+          <h1 className="text-5xl font-bold tracking-tight text-white">
             Experience <span className="text-orange-500">PotatoCMS</span> in Action
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Explore our subscription-based content management system with real examples of 
             content gating, user authentication, and premium features.
           </p>
@@ -301,9 +299,9 @@ export default function DemoPage() {
       </main>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 mt-16 border-t dark:border-slate-700">
-        <div className="text-center text-slate-600 dark:text-slate-300">
-          <p>Built with 🥔 by <a href="https://www.linkedin.com/in/ariapramesi/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 dark:hover:text-orange-400 transition-colors font-semibold">Aria P</a> | <Link href="/" className="hover:text-orange-500 dark:hover:text-orange-400">Back to Home</Link></p>
+      <footer className="container mx-auto px-4 py-8 mt-16 border-t border-slate-700">
+        <div className="text-center text-slate-300">
+          <p>Built with 🥔 by <a href="https://www.linkedin.com/in/ariapramesi/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors font-semibold text-orange-300">Aria P</a> | <Link href="/" className="hover:text-orange-400 transition-colors">Back to Home</Link></p>
         </div>
       </footer>
     </div>
