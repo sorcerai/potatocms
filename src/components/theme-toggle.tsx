@@ -11,7 +11,13 @@ import {
 import { useTheme } from "@/components/theme-provider"
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme()
+  const { setTheme, theme } = useTheme()
+  
+  // Debug logging
+  React.useEffect(() => {
+    console.log('Current theme:', theme)
+    console.log('HTML classes:', document.documentElement.className)
+  }, [theme])
 
   return (
     <DropdownMenu>

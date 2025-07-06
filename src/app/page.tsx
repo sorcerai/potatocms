@@ -202,7 +202,7 @@ export default function Home() {
             <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">PotatoCMS</h3>
           </div>
           <p className="text-slate-600 dark:text-slate-300">
-            Built with 🥔 by the PotatoCMS team
+            Built with 🥔 by <a href="https://www.linkedin.com/in/ariapramesi/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 dark:hover:text-orange-400 transition-colors font-semibold">Aria P</a>
           </p>
           <div className="flex justify-center space-x-6 text-sm text-slate-500 dark:text-slate-400">
             <Link href="/demo" className="hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Demo</Link>
@@ -210,7 +210,7 @@ export default function Home() {
             <Link href="/admin" className="hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Admin</Link>
           </div>
           <div className="text-xs text-slate-400 dark:text-slate-500 pt-4">
-            © 2024 PotatoCMS. All rights reserved.
+            © 2025 PotatoCMS. All rights reserved.
           </div>
         </div>
       </footer>

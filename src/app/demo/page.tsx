@@ -303,7 +303,7 @@ export default function DemoPage() {
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-16 border-t dark:border-slate-700">
         <div className="text-center text-slate-600 dark:text-slate-300">
-          <p>Built with 🥔 by the PotatoCMS team | <Link href="/" className="hover:text-orange-500 dark:hover:text-orange-400">Back to Home</Link></p>
+          <p>Built with 🥔 by <a href="https://www.linkedin.com/in/ariapramesi/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 dark:hover:text-orange-400 transition-colors font-semibold">Aria P</a> | <Link href="/" className="hover:text-orange-500 dark:hover:text-orange-400">Back to Home</Link></p>
         </div>
       </footer>
     </div>

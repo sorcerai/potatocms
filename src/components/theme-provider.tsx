@@ -48,11 +48,15 @@ export function ThemeProvider({
         ? "dark"
         : "light"
 
-      root.classList.add(systemTheme)
+      if (systemTheme === "dark") {
+        root.classList.add("dark")
+      }
       return
     }
 
-    root.classList.add(theme)
+    if (theme === "dark") {
+      root.classList.add("dark")
+    }
   }, [theme])
 
   const value = {
