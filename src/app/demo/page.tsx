@@ -7,12 +7,12 @@ export default function DemoPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b bg-white/80 backdrop-blur-sm border-gray-200 shadow-sm sticky top-0 z-50">
+      <header className="container mx-auto px-4 py-6 flex justify-between items-center border-b bg-white/80 backdrop-blur-sm border-gray-200 shadow-sm sticky top-0 z-50" role="banner">
         <div className="flex items-center space-x-2">
           <span className="text-2xl">🥔</span>
           <h1 className="text-2xl font-bold text-gray-900">PotatoCMS</h1>
         </div>
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-4" role="navigation" aria-label="Main navigation">
           <Link href="/">
             <Button variant="ghost" className="text-gray-600 hover:bg-gray-100">Home</Button>
           </Link>

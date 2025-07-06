@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm sticky top-0 z-50">
+      <header className="container mx-auto px-4 py-6 flex justify-between items-center bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm sticky top-0 z-50" role="banner">
         <div className="flex items-center space-x-2">
           <span className="text-2xl">🥔</span>
           <h1 className="text-2xl font-bold text-gray-900">PotatoCMS</h1>
         </div>
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-4" role="navigation" aria-label="Main navigation">
           <Link href="/demo">
             <Button variant="ghost" className="text-gray-600 hover:bg-gray-100">Demo</Button>
           </Link>
@@ -25,13 +25,13 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <main className="container mx-auto px-4 py-20">
-        <div className="text-center space-y-8">
+      <main className="container mx-auto px-4 py-20" role="main">
+        <section className="text-center space-y-8" aria-labelledby="hero-heading">
           <div className="space-y-6">
             <div className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 border border-gray-200 rounded-full text-sm font-medium mb-4">
               🚀 New: Advanced subscription management features
             </div>
-            <h1 className="text-6xl font-bold tracking-tight leading-tight text-gray-900">
+            <h1 id="hero-heading" className="text-6xl font-bold tracking-tight leading-tight text-gray-900">
               Welcome to <span className="text-gray-900">PotatoCMS</span> 🥔
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -53,7 +53,7 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-        </div>
+        </section>
 
         {/* Features Grid */}
         <div className="mt-24 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
