@@ -175,14 +175,14 @@ export default function AdminDemoPage() {
 
         {/* CTA Section */}
         <div className="mt-12 text-center bg-gray-900 text-white rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Your Content Empire?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Build Your Content Platform?</h2>
           <p className="text-lg mb-6 opacity-90">
-            This is just a preview. Sign up to unlock the full power of PotatoCMS admin tools.
+            This is just a preview. Clone the open source repository to deploy your own PotatoCMS instance.
           </p>
           <div className="space-x-4">
-            <Link href="/login">
+            <Link href="https://github.com/sorcerai/potatocms" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="text-lg px-8">
-                Sign Up Free
+                Clone on GitHub
               </Button>
             </Link>
             <Link href="/">

@@ -281,12 +281,12 @@ export default function DemoPage() {
         <div className="mt-16 text-center bg-gray-900 text-white rounded-xl p-12">
           <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of creators already using PotatoCMS to monetize their content
+            Open source CMS ready to deploy. Clone the repository and start building your content platform today.
           </p>
           <div className="space-x-4">
-            <Link href="/login">
+            <Link href="https://github.com/sorcerai/potatocms" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="text-lg px-8">
-                Start Free Trial
+                Clone on GitHub
               </Button>
             </Link>
             <Link href="/">

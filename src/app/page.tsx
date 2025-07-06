@@ -35,14 +35,14 @@ export default function Home() {
               Welcome to <span className="text-gray-900">PotatoCMS</span> 🥔
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              A modern, subscription-based Content Management System built with Next.js 14, 
+              An open source, subscription-based Content Management System built with Next.js 14, 
               TypeScript, and Supabase. Perfect for creators who want to monetize their content
               with beautiful gating strategies and seamless payment flows.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link href="/login">
+            <Link href="https://github.com/sorcerai/potatocms" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="text-lg px-8 py-3 bg-gray-900 hover:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-200 text-white">
                 Get Started Free
               </Button>
