@@ -211,8 +211,8 @@ export default function DemoPage() {
               </Card>
 
               <Card className="border-gray-900 border-2 relative bg-white">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-gray-900 text-white">Most Popular</Badge>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <Badge className="bg-gray-900 text-white px-3 py-1">Most Popular</Badge>
                 </div>
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-gray-900">Pro</CardTitle>
