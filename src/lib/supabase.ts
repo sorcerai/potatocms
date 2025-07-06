@@ -27,7 +27,6 @@ const getEnvironmentConfig = () => {
 
 // Lazy client initialization with validation
 let _supabaseClient: SupabaseClient | null = null
-let _configError: string | null = null
 
 export const getSupabaseClient = (): SupabaseClient => {
   // Return existing client if available
@@ -39,7 +38,6 @@ export const getSupabaseClient = (): SupabaseClient => {
 
   // Store configuration error for user-friendly messaging
   if (!config.isConfigured) {
-    _configError = config.error
     console.warn('⚠️ Supabase client initialized with placeholder values for build compatibility')
   }
 

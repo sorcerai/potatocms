@@ -99,10 +99,12 @@ export default function AdminDemoPage() {
                 <Plus className="mr-2 h-4 w-4" />
                 New Article (Demo)
               </Button>
-              <Button variant="outline" className="w-full justify-start" disabled>
-                <FileText className="mr-2 h-4 w-4" />
-                Manage Content (Demo)
-              </Button>
+              <Link href="/admin/demo/content">
+                <Button variant="outline" className="w-full justify-start">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Manage Content
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -112,10 +114,12 @@ export default function AdminDemoPage() {
               <CardDescription>Manage your subscribers</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
-              <Button className="w-full justify-start bg-gray-900 hover:bg-gray-800 text-white" disabled>
-                <Users className="mr-2 h-4 w-4" />
-                View Users (Demo)
-              </Button>
+              <Link href="/admin/demo/users">
+                <Button className="w-full justify-start bg-gray-900 hover:bg-gray-800 text-white">
+                  <Users className="mr-2 h-4 w-4" />
+                  View Users
+                </Button>
+              </Link>
               <Button variant="outline" className="w-full justify-start" disabled>
                 <CreditCard className="mr-2 h-4 w-4" />
                 Subscriptions (Demo)
@@ -129,10 +133,12 @@ export default function AdminDemoPage() {
               <CardDescription>Track your performance</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
-              <Button className="w-full justify-start bg-gray-900 hover:bg-gray-800 text-white" disabled>
-                <BarChart3 className="mr-2 h-4 w-4" />
-                View Analytics (Demo)
-              </Button>
+              <Link href="/admin/demo/analytics">
+                <Button className="w-full justify-start bg-gray-900 hover:bg-gray-800 text-white">
+                  <BarChart3 className="mr-2 h-4 w-4" />
+                  View Analytics
+                </Button>
+              </Link>
               <Button variant="outline" className="w-full justify-start" disabled>
                 Revenue Reports (Demo)
               </Button>
